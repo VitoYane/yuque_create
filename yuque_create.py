@@ -33,30 +33,32 @@ def run(playwright: Playwright) -> None:
 
     # Click [data-testid="doc-create-entry"]
     for _ in range(int(argv[2]) or 10):
-        
         try:
-    
-            page.locator(".larkui-icon.icon-svg.BookCatalog-module_actionItem_gOq-V").click(timeout=5000)
-
-            with page.expect_navigation():
-                page.locator("text=新建文档").click(timeout=5000)
-
-        except Exception:
-            page.locator("[data-testid=\"doc-create-entry\"]").click(timeout=5000)
-
-            with page.expect_navigation():
-                page.locator("[data-testid=\"doc-action-menu-item-create_doc\"] >> text=文档").click(timeout=5000)
-
-
-        page.locator("[data-testid=\"input\"]").click(timeout=5000)
-
-        page.locator("[data-testid=\"input\"]").fill(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-
-        with page.expect_navigation():
             try:
-                page.locator("[data-testid=\"doc-exit-edit-button\"]").click(timeout=5000)
+        
+                page.locator(".larkui-icon.icon-svg.BookCatalog-module_actionItem_gOq-V").click(timeout=5000)
+
+                with page.expect_navigation():
+                    page.locator("text=新建文档").click(timeout=5000)
+
             except Exception:
-                page.locator("[data-testid=\"doc-publish-button\"]").click(timeout=5000)
+                page.locator("[data-testid=\"doc-create-entry\"]").click(timeout=5000)
+
+                with page.expect_navigation():
+                    page.locator("[data-testid=\"doc-action-menu-item-create_doc\"] >> text=文档").click(timeout=5000)
+
+
+            page.locator("[data-testid=\"input\"]").click(timeout=5000)
+
+            page.locator("[data-testid=\"input\"]").fill(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+
+            with page.expect_navigation():
+                try:
+                    page.locator("[data-testid=\"doc-exit-edit-button\"]").click(timeout=5000)
+                except Exception:
+                    page.locator("[data-testid=\"doc-publish-button\"]").click(timeout=5000)
+        except Exception:
+            continue
 
     # ---------------------
     context.close()
