@@ -11,6 +11,7 @@ playwright install
 ```
 
 需要替换脚本中的账号密码
+
 ![image](https://user-images.githubusercontent.com/17432059/197738774-1f7fb5af-2bdc-458f-a557-649386f68c6d.png)
 
 
