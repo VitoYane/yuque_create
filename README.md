@@ -5,7 +5,7 @@
 需要安装 playwright 库, 使用Python3环境, 有异常可以自己调整代码
 
 ```
-pip install --upgrade pip
+python -m pip install --upgrade pip
 pip install fire
 pip install playwright
 playwright install
