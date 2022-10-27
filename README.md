@@ -11,11 +11,6 @@ pip install playwright
 playwright install
 ```
 
-需要替换脚本中的账号密码
-
-![image](https://user-images.githubusercontent.com/17432059/197738774-1f7fb5af-2bdc-458f-a557-649386f68c6d.png)
-
-
 用法: 
 ```
 python yuque_create.py [url] [times] [username] [password] [headless]
@@ -39,6 +34,6 @@ headless
 推荐开源项目: https://github.com/outline/outline 自己搭建笔记系统.
 
 
-== 2022-10-27 更新
+## 2022-10-27 更新
 - 因为页面改版, 元素位置调整, 所以调整了一下代码, 增加进度显示
 - 不过新的会员策略是每个月100篇, 貌似够用了, 整体也有诚意很多, 所以也不用这个脚本了
