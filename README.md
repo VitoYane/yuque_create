@@ -6,6 +6,7 @@
 
 ```
 pip install --upgrade pip
+pip install fire
 pip install playwright
 playwright install
 ```
@@ -17,7 +18,7 @@ playwright install
 
 用法: 
 ```
-python yuque_create.py [url] [times]
+python yuque_create.py [url] [times] [username] [password] [headless]
 ```
 
 url: 
@@ -27,6 +28,17 @@ url:
 times:
 - 创建页面数量
 
+username password:
+- 用户名 密码
+
+headless
+- 无头模式, 设置为1或者True, 可以不显示浏览器
+
 速度较慢, 但是跑1w个页面也应该够用了, 喜欢还是充值吧, 不喜欢就换.
 
 推荐开源项目: https://github.com/outline/outline 自己搭建笔记系统.
+
+
+== 2022-10-27 更新
+- 因为页面改版, 元素位置调整, 所以调整了一下代码, 增加进度显示
+- 不过新的会员策略是每个月100篇, 貌似够用了, 整体也有诚意很多, 所以也不用这个脚本了
